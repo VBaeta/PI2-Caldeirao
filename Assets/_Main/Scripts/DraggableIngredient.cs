@@ -2,19 +2,24 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Ingredient : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [Header("UI")]
-    public Image image;
+    public Image background;
+    public Image ingImage;
+    public Canvas canvas;
 
     [HideInInspector] public Transform parentAfterDrag;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Begin Drag");
-        image.raycastTarget = false;
+        ingImage.raycastTarget = false;
         parentAfterDrag = transform.parent;
-        transform.SetParent(transform.root);
+        transform.SetParent(canvas.transform);
+        transform.SetAsLastSibling();
+        background.gameObject.SetActive(false);
+        
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -26,7 +31,7 @@ public class Ingredient : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("End Drag");
-        image.raycastTarget = true;
+        ingImage.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
     }
 

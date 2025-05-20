@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6182861660342984565}
   - component: {fileID: 969624123546497868}
   - component: {fileID: 8298822515928606140}
-  - component: {fileID: 6363554450092900952}
+  - component: {fileID: 7411199326954710349}
   m_Layer: 5
   m_Name: Ingredient
   m_TagString: Untagged
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6363554450092900952
+--- !u!114 &7411199326954710349
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,5 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e881ca58d5357444990bdcf550841e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 8298822515928606140}
+  canvas: {fileID: 0}
   parentAfterDrag: {fileID: 0}
