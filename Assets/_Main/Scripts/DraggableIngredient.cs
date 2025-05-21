@@ -34,15 +34,4 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         ingImage.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
     }
-
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
 }

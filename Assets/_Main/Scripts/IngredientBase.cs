@@ -1,16 +1,24 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
-public class IngredientBase : MonoBehaviour
+[CreateAssetMenu(menuName = "Scriptable Objects/Ingredient")]
+public class IngredientBase : ScriptableObject
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Sprite ingSprite;
+    public string ingName;
+    public string ingDescription;
+    public IngredientType ingType;
+    public float cookingDuration;
+    public float choppingDuration;
+    public float seasoningDuration;
+    public bool isCooked;
+    public bool isChopped;
+    public IngredientBase SeasoningApplied;
 
-    // Update is called once per frame
-    void Update()
+    public enum IngredientType
     {
-        
+        Vegetal,
+        Carne,
+        Tempero
     }
 }
