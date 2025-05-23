@@ -18,11 +18,6 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
     public void DetectIngredient()
     {
         
-            Debug.Log("na tábua");
-            //Start Timer
-            //Show Time On Screen
-            //Modify Ingredient to Chopped = true.
-        
     }
 
 }

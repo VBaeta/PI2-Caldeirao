@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a41e718db466034cab214b6df724fa8, type: 3}
+  m_Name: Berinjelula
+  m_EditorClassIdentifier: 
+  ingSprite: {fileID: -2941741574115036834, guid: db21ec8e4546f73469beda6db3cff645, type: 3}
+  ingName: "Brinj\xE9lula Crua"
+  ingDescription: Bicho ou planta??
+  ingType: 0
+  cookingDuration: 10
+  choppingDuration: 10
+  seasoningDuration: 10
+  isCooked: 0
+  isChopped: 0
+  SeasoningApplied: {fileID: 0}

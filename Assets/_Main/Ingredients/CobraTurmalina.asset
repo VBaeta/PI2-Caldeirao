@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a41e718db466034cab214b6df724fa8, type: 3}
+  m_Name: CobraTurmalina
+  m_EditorClassIdentifier: 
+  ingSprite: {fileID: -5145490418505678693, guid: e06761b7e9faf1646a8dc2556736e8af, type: 3}
+  ingName: Cobra Turmalina
+  ingDescription: "Que brilho lindo! Parece o c\xE9u noturno."
+  ingType: 1
+  cookingDuration: 15
+  choppingDuration: 20
+  seasoningDuration: 15
+  isCooked: 0
+  isChopped: 0
+  isSeasoned: 0
+  SeasoningApplied: {fileID: 0}

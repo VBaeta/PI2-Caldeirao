@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
     public Image background;
     public Image ingImage;
     public Canvas canvas;
+    public IngredientBase ingInfo;
 
     [HideInInspector] public Transform parentAfterDrag;
 
@@ -33,5 +35,10 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         Debug.Log("End Drag");
         ingImage.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
+    }
+
+    public void InitializeIngredient()
+    {
+        ingImage.sprite = ingInfo.ingSprite;
     }
 }

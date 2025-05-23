@@ -1,7 +1,8 @@
 using UnityEngine;
-using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Ingredient")]
+
 public class IngredientBase : ScriptableObject
 {
     public Sprite ingSprite;
@@ -13,12 +14,13 @@ public class IngredientBase : ScriptableObject
     public float seasoningDuration;
     public bool isCooked;
     public bool isChopped;
+    public bool isSeasoned;
     public IngredientBase SeasoningApplied;
+}
 
-    public enum IngredientType
-    {
-        Vegetal,
-        Carne,
-        Tempero
-    }
+public enum IngredientType
+{
+    Vegetal,
+    Carne,
+    Tempero
 }
