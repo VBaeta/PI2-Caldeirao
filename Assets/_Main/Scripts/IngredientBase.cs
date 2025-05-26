@@ -16,6 +16,7 @@ public class IngredientBase : ScriptableObject
     public bool isChopped;
     public bool isSeasoned;
     public IngredientBase SeasoningApplied;
+    public int levelToDiscover;
 }
 
 public enum IngredientType

@@ -9,9 +9,19 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
     public Image background;
     public Image ingImage;
     public Canvas canvas;
-    public IngredientBase ingInfo;
-
+   
+    [HideInInspector] public IngredientBase ingredientBase;
     [HideInInspector] public Transform parentAfterDrag;
+
+
+    public void InitializeIngredient(IngredientBase newIngredient)
+    {
+        ingImage = GetComponent<Image>();
+        canvas = FindAnyObjectByType<Canvas>();
+        background = transform.parent.parent.parent.parent.GetComponent<Image>();
+        ingredientBase = newIngredient;
+        ingImage.sprite = newIngredient.ingSprite;
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -35,10 +45,5 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         Debug.Log("End Drag");
         ingImage.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
-    }
-
-    public void InitializeIngredient()
-    {
-        ingImage.sprite = ingInfo.ingSprite;
     }
 }
