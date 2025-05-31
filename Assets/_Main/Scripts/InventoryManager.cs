@@ -1,7 +1,5 @@
-using JetBrains.Annotations;
 using UnityEngine;
-
-
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -10,60 +8,41 @@ public class InventoryManager : MonoBehaviour
 
     public InventorySlot[] slots;
     public GameObject draggableIngredientPrefab;
+    public Image inventoryBackground;
+    public Canvas canvas;
 
     public static InventoryManager Instance;
 
-    public void Awake()
+    private void Awake()
     {
         if (Instance == null)
-        {
             Instance = this;
-        }
         else
-        {
             Destroy(this);
-        }
     }
 
-    public void AddIngredients(IngredientBase ingredient, IngredientType ingredientType)
+    public void AddIngredient(IngredientBase ingredient, IngredientType ingredientType)
     {
-        for (int i = 0; i < slots.Length; i++) 
-        {
-            InventorySlot slot = slots[i];
-            if (ingredient.ingType == ingredientType)
-            {
-                DraggableIngredient ingredientInSlot = slot.GetComponentInChildren<DraggableIngredient>();
-
-                if (ingredientInSlot == null)
-                {
-                    SpawnNewIngredient(ingredient, slot);
-                    return;
-                }
-            }
-            
-        }
-    }
-
-    void SpawnNewIngredient(IngredientBase newIngredient, InventorySlot slot)
-    {
-        GameObject newIngGO = Instantiate(draggableIngredientPrefab, slot.transform);
-        DraggableIngredient draggableIngredient = newIngGO.GetComponent<DraggableIngredient>();
-        draggableIngredient.InitializeIngredient(newIngredient);
-    }
-
-    public void ResetAllSlots()
-    {
-        Debug.Log("Reseting Slots");
+        if (ingredient.ingType != ingredientType)
+            return;
 
         for (int i = 0; i < slots.Length; i++)
         {
-            if (slots[i].transform.childCount == 0)
+            InventorySlot slot = slots[i];
+            if (slot.IsEmpty())
             {
-                break;
+                slot.SetIngredient(ingredient);
+                return;
             }
+        }
+    }
 
-            Destroy(slots[i].transform.GetChild(0));
-            Debug.Log($"Child Destroyed: {slots[i].transform.GetChild(0)}");
+
+    public void ResetAllSlots()
+    {
+        foreach (InventorySlot slot in slots)
+        {
+            slot.SetIngredient(null);
         }
     }
 }

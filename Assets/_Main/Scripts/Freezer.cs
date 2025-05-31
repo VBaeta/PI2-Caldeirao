@@ -10,7 +10,7 @@ public class Freezer : MonoBehaviour
 
         for (int i = 0; i < InventoryManager.Instance.discoveredIngredients.Length; i++)
         {
-            InventoryManager.Instance.AddIngredients(InventoryManager.Instance.discoveredIngredients[i], storageType);
+            InventoryManager.Instance.AddIngredient(InventoryManager.Instance.discoveredIngredients[i], storageType);
         }
     }
 }

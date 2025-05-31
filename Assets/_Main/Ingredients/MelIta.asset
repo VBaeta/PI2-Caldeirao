@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a41e718db466034cab214b6df724fa8, type: 3}
-  m_Name: BatataPalida
+  m_Name: MelIta
   m_EditorClassIdentifier: 
-  ingSprite: {fileID: 7740470771544801610, guid: b3087ea10be11ae4589d9c0f0bff1a0c, type: 3}
-  ingName: "Batata P\xE1lida"
-  ingDescription: "Que batata p\xE1lida! Parece inhame."
-  ingType: 0
-  cookingDuration: 15
-  choppingDuration: 5
+  ingSprite: {fileID: 829833811033043677, guid: f5f701c85e4e9564e9508e0d69355012, type: 3}
+  ingName: "Mel It\xE1"
+  ingDescription: Mel com cristais
+  ingType: 2
+  cookingDuration: 0
+  choppingDuration: 0
   seasoningDuration: 10
   isCooked: 0
   isChopped: 0
   isSeasoned: 0
   SeasoningApplied: {fileID: 0}
-  levelToDiscover: 2
+  levelToDiscover: 4
